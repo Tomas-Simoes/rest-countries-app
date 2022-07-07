@@ -1,7 +1,7 @@
-import { Fragment } from "react";
+import { country } from "../../App";
 
-const Country = () => {
-  return <Fragment> *insert country* </Fragment>;
+const Country = ({ country }: { country: country }) => {
+  return <p>{country.name.common}</p>;
 };
 
 export default Country;
