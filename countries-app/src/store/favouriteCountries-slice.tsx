@@ -1,12 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useSelector } from "react-redux";
 
 interface favoriteCountry {
   name: string;
   flag: string;
 }
 
-interface initialState {
+export interface initialState {
   favoriteCountries: favoriteCountry[];
 }
 

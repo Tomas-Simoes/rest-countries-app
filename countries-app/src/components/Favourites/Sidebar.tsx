@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-
 import { useDispatch, useSelector } from "react-redux";
+
 import type { RootState } from "../../store/redux-index";
 
 import { favoriteActions } from "../../store/favouriteCountries-slice";
