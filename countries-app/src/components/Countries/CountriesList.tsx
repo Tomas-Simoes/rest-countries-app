@@ -1,6 +1,8 @@
 import { Fragment } from "react";
 import { country } from "../Continents/ListingArea";
 
+import "../../styles/UI/Card.css";
+
 import Country from "./Country";
 
 const CountriesList = ({ countries }: { countries: country[] }) => {
@@ -10,7 +12,9 @@ const CountriesList = ({ countries }: { countries: country[] }) => {
         <p> There is no results for your search </p>
       ) : (
         countries.map((country: country) => (
-          <Country key={country.name.common} country={country} />
+          <div className="card" key={country.name.common}>
+            <Country key={country.name.common} country={country} />
+          </div>
         ))
       )}
     </Fragment>

@@ -71,8 +71,6 @@ function ListingArea() {
     setTextToSearch(textToSearch);
   };
 
-  console.log("a");
-
   const render = () => {
     if (error) return <p>{error}</p>;
     if (fetchedContries.length === 0) return <p> Loading... </p>;

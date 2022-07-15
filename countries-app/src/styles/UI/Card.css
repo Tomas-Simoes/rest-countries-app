@@ -16,6 +16,10 @@
   padding: 2px 16px;
 }
 
+.container {
+  padding: 2px 16px;
+}
+
 img {
   margin: 10px;
   width: 50%;

@@ -1,0 +1,32 @@
+.sidebar {
+  height: 100%;
+  width: 20rem;
+
+  position: fixed;
+  z-index: 1;
+  background-color: rgb(64, 64, 64);
+
+  top: 0;
+  left: 0;
+}
+
+.sidebar h1 {
+  color: white;
+  text-align: center;
+}
+
+.sidebar h4 {
+  text-align: center;
+}
+
+.sidebar img {
+  margin: auto;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar button {
+  margin: auto;
+  margin-bottom: 10px;
+  display: block;
+}

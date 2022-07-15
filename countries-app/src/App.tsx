@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import ListingArea from "./components/Continents/ListingArea";
+import Sidebar from "./components/Favourites/Sidebar";
 
 export interface country {
   name: {
@@ -14,7 +16,12 @@ export interface country {
 }
 
 function App() {
-  return <ListingArea />;
+  return (
+    <Fragment>
+      <Sidebar />
+      <ListingArea />;
+    </Fragment>
+  );
 }
 
 export default App;
