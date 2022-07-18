@@ -1,12 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface favoriteCountry {
+interface IActionAdd {
+  type: string;
+  payload: {
+    name: string;
+    flag: string;
+  };
+}
+
+interface IActionRemove {
+  type: string;
+  payload: string;
+}
+
+interface IFavoriteCountry {
   name: string;
   flag: string;
 }
 
 export interface initialState {
-  favoriteCountries: favoriteCountry[];
+  favoriteCountries: IFavoriteCountry[];
 }
 
 const favoriteInitialState: initialState = {
@@ -17,14 +30,14 @@ const favoriteCountriesSlice = createSlice({
   name: "favouriteCountries",
   initialState: favoriteInitialState,
   reducers: {
-    addFavoriteCountry(state, action) {
+    addFavoriteCountry(state, action: IActionAdd) {
       state.favoriteCountries.push({
         name: action.payload.name,
         flag: action.payload.flag,
       });
     },
 
-    removeFavoriteCountry(state, action) {
+    removeFavoriteCountry(state, action: IActionRemove) {
       state.favoriteCountries = state.favoriteCountries.filter(
         (country) => country.name !== action.payload
       );
